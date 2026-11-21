@@ -1,0 +1,15 @@
+{
+  "name": "cutout-toon",
+  "owner": { "name": "dimqsh" },
+  "metadata": { "description": "Cartoon videos drawn entirely in JavaScript." },
+  "plugins": [
+    {
+      "name": "cutout-toon",
+      "source": "./",
+      "description": "Draws short cartoon videos entirely in JavaScript and renders them to mp4: hand-drawn heroes, lit 2D sets, real 3D stages, animated diagrams and named camera moves.",
+      "version": "0.1.0",
+      "category": "media",
+      "keywords": ["animation", "cartoon", "video", "canvas", "three.js"]
+    }
+  ]
+}

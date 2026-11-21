@@ -32,6 +32,10 @@ if (problems.length) process.exit(1);
 console.log(`check ok: ${proj.SHOTS.length} shots, ${proj.DURATION} s, ${(proj.CAPTIONS || []).length} captions`);
 if (mode === 'check') process.exit(0);
 
+// playwright and three.js live in engine/node_modules; say how to get them instead of a stack trace
+if (!fs.existsSync(path.join(ENGINE, 'node_modules', 'playwright')) || !fs.existsSync(path.join(ENGINE, 'node_modules', 'three'))) {
+  console.error(`missing dependencies: run  npm run setup --prefix "${ENGINE}"`); process.exit(2);
+}
 const { chromium } = await import('playwright');
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.ttf': 'font/ttf', '.woff2': 'font/woff2', '.png': 'image/png', '.jpg': 'image/jpeg' };
 const server = http.createServer((req, res) => {
