@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>cutout-toon</title>
+<style>
+  @font-face { font-family: Toon; font-weight: 800; src: url(/engine/fonts/Montserrat-ExtraBold.ttf); }
+  html, body { margin: 0; background: #120d0a; }
+  canvas { display: block; width: 1080px; height: 1920px; }
+  svg { position: absolute; width: 0; height: 0; }
+</style>
+<!-- The living ink line: four slightly different wobbles, swapped 8 times a second by light.js. -->
+<svg aria-hidden="true"><defs>
+  <filter id="boil0" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="1" seed="3"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="boil1" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="1" seed="11"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="boil2" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="1" seed="23"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="boil3" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.021" numOctaves="1" seed="42"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script type="module" src="/engine/src/player.js"></script>

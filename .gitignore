@@ -1,0 +1,9 @@
+# dependencies: engine/node_modules is a local link
+node_modules
+
+# rendered video, rebuild with engine/render.mjs
+*.mp4
+
+# local work notes
+.scratch/
+.DS_Store

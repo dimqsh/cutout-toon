@@ -1,0 +1,8 @@
+{
+  "name": "cutout-toon",
+  "version": "0.1.0",
+  "description": "2D cutout cartoon explainers drawn entirely in JS: a big-head mascot rig with smooth pose blending, layered sets, comic panel, captions and diagram cards, rendered to mp4 with Playwright and ffmpeg.",
+  "author": { "name": "Dimash" },
+  "license": "MIT",
+  "keywords": ["animation", "cartoon", "cutout", "shorts", "canvas"]
+}
